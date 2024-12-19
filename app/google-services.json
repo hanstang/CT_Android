@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "835626679160",
+    "project_id": "hans-first-project",
+    "storage_bucket": "hans-first-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835626679160:android:834f8ae2d503f1c3cde68d",
+        "android_client_info": {
+          "package_name": "hans.clevertap.firstapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835626679160-ohqa2t9jt4s2s8qv6uhdilv9im3g8g1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6isJ2cEejjwltHISDiCR_AmB19hzgpZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835626679160-ohqa2t9jt4s2s8qv6uhdilv9im3g8g1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

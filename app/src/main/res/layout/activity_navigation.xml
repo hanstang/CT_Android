@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigationActivity">
+
+    <!-- FrameLayout to allow overlay with a floating, draggable image -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/bgActivity">
+
+
+
+            <!--
+            Native Display Show Up
+            -->
+            <!-- User Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User ID : " />
+                <TextView
+                    android:id="@+id/current_userID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textIsSelectable="true"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type : " />
+                <TextView
+                    android:id="@+id/current_userType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textIsSelectable="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Push Notification"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/spinner_pushType"
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/push_notification_type"/>
+                <Button
+                    android:id="@+id/button_triggerPush"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trigger" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="In App"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_inAPPType"
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/inapp_notification_type"/>
+                <Button
+                    android:id="@+id/button_triggerInAPP"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trigger" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/button_appInbox"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="App Inbox" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/button_webView"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="WebView" />
+            </LinearLayout>
+            <!--
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App Inbox"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/inapp_notification_type"/>
+                <Button
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trigger" />
+            </LinearLayout>
+            -->
+            <Button
+                android:id="@+id/button_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="logout"/>
+
+            <Button
+                android:id="@+id/button_nps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NPS"/>
+        </LinearLayout>
+    <!--</ScrollView>-->
+
+        <!-- Container for the floating image and close button -->
+        <FrameLayout
+            android:id="@+id/floating_image_container"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <!-- Draggable Image -->
+            <ImageView
+                android:id="@+id/floating_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background" />
+
+            <!-- Close Button positioned on top right of the image -->
+            <ImageView
+                android:id="@+id/close_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_close"
+                android:layout_gravity="top|end"
+                android:layout_margin="0dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Close Button"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
